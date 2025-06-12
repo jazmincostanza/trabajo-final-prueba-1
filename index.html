@@ -1,234 +1,346 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Edificio COSTA MAR. Departamentos frente al mar. Comercializa Armando Costanza Propiedades.">
-  <title>Edificio COSTA MAR | Venta Puerto Madryn</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Edificio COSTA MAR. Departamentos de lujo en venta frente al mar en Puerto Madryn. Comercializa Armando Costanza Propiedades. Pileta, SUM, cocheras.">
+    
+    <title>Edificio COSTA MAR | Venta de Departamentos en Puerto Madryn | Armando Costanza Propiedades</title>
 
-  <!-- Bootstrap & Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <style>
-    .carousel-item img {
-      object-fit: cover;
-      height: 80vh;
-      width: 100%;
-      filter: brightness(0.6);
-    }
-    :target {
-      scroll-margin-top: 100px;
-    }
-  </style>
+    <!-- Enlace a Íconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        /* Ajuste para que las imágenes del carrusel se vean bien */
+        .carousel-item img {
+            object-fit: cover;
+            height: 80vh; /* Aumentamos la altura para un look más impactante */
+            width: 100%;
+            filter: brightness(0.6); /* Oscurece la imagen para que el texto resalte */
+        }
+        .navbar {
+            transition: background-color 0.3s ease-in-out;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-4">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#inicio">
-        <img src="images/logo1.png" alt="Logo Costa Mar" style="height: 50px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
-          <li class="nav-item"><a href="#concepto" class="nav-link">Conocé Costa Mar</a></li>
-          <li class="nav-item"><a href="#tipologias" class="nav-link">Tipos de unidades</a></li>
-          <li class="nav-item"><a href="#incluye" class="nav-link">Qué ofrece el edificio</a></li>
-          <li class="nav-item"><a href="#ubicacion" class="nav-link">Dónde estamos</a></li>
-          <li class="nav-item"><button class="btn btn-primary ms-lg-2" data-bs-toggle="modal" data-bs-target="#contactModal">Contacto</button></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+    <!-- =================================================================
+    ✅ NAVBAR
+    ================================================================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/LOGO.png" alt="Logo Edificio COSTA MAR" style="height: 40px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#heroCarousel" class="nav-link">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                El Proyecto
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#concepto">Concepto</a></li>
+                                <li><a class="dropdown-item" href="#tipologias">Tipologías</a></li>
+                                <li><a class="dropdown-item" href="#ficha-tecnica">Ficha Técnica</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#amenities" class="nav-link">Amenities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#ubicacion" class="nav-link">Ubicación</a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-primary ms-lg-2" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                Contacto
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<main>
-<div id="inicio" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/img1.jpg" class="d-block w-100" alt="Vista edificio">
-      <div class="carousel-caption text-center">
-        <h1 class="display-3 fw-bold text-uppercase">Edificio Costa Mar</h1>
-        <p class="lead">Vivir frente al mar en Puerto Madryn</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="images/img2.jpg" class="d-block w-100" alt="Vista balcón">
-      <div class="carousel-caption">
-        <h2 class="display-4">Vistas que inspiran</h2>
-        <p class="lead">Despertá cada día con el Golfo Nuevo como paisaje.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="images/img4.jpg" class="d-block w-100" alt="Amenities">
-      <div class="carousel-caption">
-        <h2 class="display-4">Un estilo único</h2>
-        <p class="lead">Pileta, SUM y más para disfrutar todo el año.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" data-bs-target="#inicio" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-  <button class="carousel-control-next" data-bs-target="#inicio" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
-</div>
-
-<!-- ✅ SECCIÓN "Conocé Costa Mar" -->
-<section id="concepto" class="container my-5 py-5 bg-light text-center">
-  <h2 class="mb-4 fw-bold text-uppercase">Conocé Costa Mar</h2>
-  <p class="lead text-muted">Costa Mar combina diseño moderno, ubicación privilegiada y calidad constructiva frente al mar. Ideal para vivir o invertir.</p>
-</section>
-
-<!-- ✅ SECCIÓN "Tipos de unidades" -->
-<section id="tipologias" class="bg-white py-5 text-center">
-  <div class="container">
-    <h2 class="mb-5 text-uppercase">Tipos de unidades</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="images/img3.jpg" class="card-img-top" alt="2 Ambientes">
-          <div class="card-body">
-            <h5 class="card-title">2 Ambientes</h5>
-            <p class="card-text">Funcionales y luminosos. Ideales para primeras viviendas o inversión.</p>
-            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#contactModal">Consultar</button>
-          </div>
+    <main>
+        <!-- =================================================================
+        ✅ HERO / CAROUSEL DE IMÁGENES
+        ================================================================== -->
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/img1.jpg" class="d-block w-100" alt="Vista exterior del Edificio COSTA MAR">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h1 class="display-3 fw-bold">EDIFICIO COSTA MAR</h1>
+                        <p class="lead fs-4">Un nuevo concepto de vida frente al mar en Puerto Madryn.</p>
+                        <p class="fw-light">Comercializa en exclusiva: <strong>Armando Costanza Propiedades</strong></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/img2.jpg" class="d-block w-100" alt="Balcón con vista al mar">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-4">Vistas que inspiran</h2>
+                        <p class="lead">Despertá cada día con el horizonte del Golfo Nuevo como paisaje.</p>
+                    </div>
+                </div>
+                 <div class="carousel-item">
+                    <img src="images/img4.jpg" class="d-block w-100" alt="Pileta del edificio">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-4">Un estilo de vida único</h2>
+                        <p class="lead">Amenities de primer nivel pensados para tu confort y esparcimiento.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Siguiente</span>
+            </button>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="images/img2.jpg" class="card-img-top" alt="3 Ambientes">
-          <div class="card-body">
-            <h5 class="card-title">3 Ambientes</h5>
-            <p class="card-text">Amplios espacios y confort. Perfectos para familias o parejas.</p>
-            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#contactModal">Consultar</button>
-          </div>
+
+        <!-- =================================================================
+        ✅ SECCIÓN "CONCEPTO"
+        ================================================================== -->
+        <section id="concepto" class="container text-center my-5 py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="mb-4">Un Proyecto que Redefine el Paisaje Urbano</h2>
+                    <p class="lead text-muted">Desarrollado por <strong>Constructora Desarrollos Patagonia S.A.</strong>, COSTA MAR es un proyecto que combina diseño de vanguardia, materiales nobles y una ubicación insuperable. Fue concebido para quienes buscan no solo una propiedad, sino una experiencia de vida, fusionando el confort de la ciudad con la tranquilidad y la belleza del entorno marino.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+        ✅ SECCIÓN "TIPOLOGÍAS"
+        ================================================================== -->
+        <section id="tipologias" class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Tipologías Disponibles</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/img3.jpg" class="card-img-top" alt="Interior de un departamento">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">2 Ambientes</h5>
+                                <p class="card-text">Unidades funcionales y luminosas, ideales como primera vivienda o inversión de renta.</p>
+                                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Consultar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/img2.jpg" class="card-img-top" alt="Balcón de una unidad">
+                             <div class="card-body text-center">
+                                <h5 class="card-title">3 Ambientes</h5>
+                                <p class="card-text">Amplitud y confort con vistas panorámicas. El espacio perfecto para la vida en familia.</p>
+                                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Consultar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                         <div class="card h-100 shadow-sm">
+                             <img src="images/img1.jpg" class="card-img-top" alt="Frente del edificio">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Pisos Exclusivos</h5>
+                                <p class="card-text">Máxima privacidad y lujo. Unidades de 4 ambientes con palier privado y detalles premium.</p>
+                                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Consultar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+        ✅ SECCIÓN "FICHA TÉCNICA"
+        ================================================================== -->
+        <section id="ficha-tecnica" class="container my-5 py-5">
+            <h2 class="text-center mb-5">Calidad y Detalles de Terminación</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Estructura de Hormigón Armado<i class="bi bi-check-circle-fill text-success fs-4"></i></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Mampostería de ladrillo cerámico<i class="bi bi-check-circle-fill text-success fs-4"></i></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Aberturas de aluminio con Doble Vidriado Hermético (DVH)<i class="bi bi-check-circle-fill text-success fs-4"></i></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Calefacción por losa radiante con control individual<i class="bi bi-check-circle-fill text-success fs-4"></i></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Pisos de porcelanato de primera calidad<i class="bi bi-check-circle-fill text-success fs-4"></i></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Muebles de cocina de diseño y mesadas de granito<i class="bi bi-check-circle-fill text-success fs-4"></i></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Grifería y sanitarios de primeras marcas<i class="bi bi-check-circle-fill text-success fs-4"></i></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Ascensores de última generación<i class="bi bi-check-circle-fill text-success fs-4"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+        ✅ SECCIÓN "AMENITIES"
+        ================================================================== -->
+        <section id="amenities" class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Amenities y Servicios Exclusivos</h2>
+                 <div class="row text-center g-4">
+                    <div class="col-md-4">
+                        <div class="border p-4 h-100 shadow-sm bg-white rounded">
+                            <i class="bi bi-water fs-1 text-primary"></i>
+                            <h3 class="mt-3 h5">Pileta Climatizada In-Out</h3>
+                            <p class="text-muted">Con sector cubierto y descubierto para disfrutar todo el año.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border p-4 h-100 shadow-sm bg-white rounded">
+                            <i class="bi bi-people-fill fs-1 text-primary"></i>
+                            <h3 class="mt-3 h5">Salón de Usos Múltiples (SUM)</h3>
+                            <p class="text-muted">Equipado con parrilla y vistas al mar para tus eventos.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border p-4 h-100 shadow-sm bg-white rounded">
+                            <i class="bi bi-shield-lock-fill fs-1 text-primary"></i>
+                            <h3 class="mt-3 h5">Seguridad y Cocheras</h3>
+                            <p class="text-muted">Acceso controlado, cámaras y cocheras opcionales en subsuelo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- =================================================================
+        ✅ SECCIÓN "UBICACIÓN"
+        ================================================================== -->
+        <section id="ubicacion" class="container my-5 py-5">
+            <h2 class="text-center mb-5">Ubicación Privilegiada</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3>Boulevard Brown 1500, Puerto Madryn</h3>
+                    <p class="lead">En la milla de oro de la costanera, con acceso directo a la playa y a pasos de los mejores restaurantes y comercios de la ciudad. Una inversión segura en la zona de mayor revalorización de Madryn.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Boulevard+Almirante+Brown+1500,Puerto+Madryn" target="_blank" class="btn btn-primary mt-3">
+                        <i class="bi bi-geo-alt-fill me-2"></i>Ver en Google Maps
+                    </a>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <div class="ratio ratio-16x9">
+                        <!-- Reemplaza el src con el código de "Insertar un mapa" de Google Maps para un mapa interactivo -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3005.815340058814!2d-65.0270160233649!3d-42.76676062772733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbe02355555555555%3A0x88c9a35ccaa89269!2sBv.%20Almirante%20Brown%201500%2C%20U9120%20Puerto%20Madryn%2C%20Chubut!5e0!3m2!1ses!2sar!4v1683141569420!5m2!1ses!2sar" class="rounded shadow" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- =================================================================
+        ✅ SECCIÓN "COMERCIALIZA"
+        ================================================================== -->
+        <section id="comercializa" class="bg-light py-5">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <img src="https://www.armandocostanza.com/img/logo.png" alt="Logo Armando Costanza Propiedades" style="max-height: 80px;" class="mb-4">
+                        <h2 class="mb-3">Invertí con el respaldo de los expertos</h2>
+                        <p class="lead text-muted">Armando Costanza Propiedades, con más de 30 años de trayectoria en el mercado inmobiliario de Puerto Madryn, es la firma encargada de la comercialización exclusiva de COSTA MAR, garantizando un asesoramiento profesional y la mejor atención.</p>
+                        <a href="https://www.armandocostanza.com/" target="_blank" class="btn btn-dark mt-3">Conocé la Inmobiliaria</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- =================================================================
+    ✅ MODAL (FORMULARIO DE CONTACTO)
+    ================================================================== -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form class="modal-content needs-validation" novalidate>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Solicitá más información</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted small">Dejanos tus datos y un asesor de <strong>Armando Costanza Propiedades</strong> se comunicará a la brevedad.</p>
+                    <div class="mb-3">
+                        <label for="contactName" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="contactName" required>
+                        <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactEmail" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="contactEmail" required>
+                        <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactMessage" class="form-label">Consulta</label>
+                        <textarea class="form-control" id="contactMessage" rows="4" placeholder="Ej: Me interesa recibir el brochure con los planos y lista de precios de las unidades de 3 ambientes." required></textarea>
+                        <div class="invalid-feedback">Por favor, escribe tu consulta.</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Enviar Consulta</button>
+                </div>
+            </form>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="images/img1.jpg" class="card-img-top" alt="Piso exclusivo">
-          <div class="card-body">
-            <h5 class="card-title">Pisos Exclusivos</h5>
-            <p class="card-text">Unidades premium de 4 ambientes con palier privado.</p>
-            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#contactModal">Consultar</button>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
 
-<!-- ✅ SECCIÓN "Qué ofrece el edificio" -->
-<section id="incluye" class="bg-light py-5 text-center">
-  <div class="container">
-    <h2 class="mb-5 text-uppercase">Qué ofrece el edificio</h2>
-    <div class="row g-4">
-      <div class="col-md-3">
-        <i class="bi bi-water fs-1 text-primary"></i>
-        <p class="mt-2">Pileta climatizada</p>
-      </div>
-      <div class="col-md-3">
-        <i class="bi bi-house-door fs-1 text-primary"></i>
-        <p class="mt-2">SUM con parrilla</p>
-      </div>
-      <div class="col-md-3">
-        <i class="bi bi-shield-lock fs-1 text-primary"></i>
-        <p class="mt-2">Seguridad 24hs</p>
-      </div>
-      <div class="col-md-3">
-        <i class="bi bi-car-front fs-1 text-primary"></i>
-        <p class="mt-2">Cocheras cubiertas</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ✅ SECCIÓN "Dónde estamos" -->
-<section id="ubicacion" class="container my-5">
-  <div class="row align-items-center">
-    <div class="col-md-6">
-      <h2 class="text-uppercase mb-4">Dónde estamos</h2>
-      <p class="lead">Ubicado sobre Boulevard Brown 1500, frente al mar y en la zona más valorizada de Puerto Madryn.</p>
-      <a href="https://www.google.com/maps?q=brown+1500+puerto+madryn" class="btn btn-dark mt-3" target="_blank">
-        <i class="bi bi-geo-alt-fill me-2"></i> Ver en Google Maps
-      </a>
-    </div>
-    <div class="col-md-6">
-      <img src="images/mapa.png" class="img-fluid rounded shadow" alt="Mapa de ubicación">
-    </div>
-  </div>
-</section>
-
-<!-- ✅ MODAL DE CONTACTO -->
-<div class="modal fade" id="contactModal" tabindex="-1">
-  <div class="modal-dialog">
-    <form class="modal-content needs-validation" novalidate>
-      <div class="modal-header">
-        <h5 class="modal-title">Quiero más info</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" required>
-          <div class="invalid-feedback">Por favor escribí tu nombre completo para poder contactarte.</div>
+    <!-- =================================================================
+    ✅ FOOTER
+    ================================================================== -->
+    <footer class="bg-dark text-white mt-auto pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-4">
+                    <h5 class="text-uppercase">Edificio COSTA MAR</h5>
+                    <p class="text-white-50">Un proyecto de <strong>Desarrollos Patagonia S.A.</strong><br>
+                    Comercializa en exclusiva: <strong>Armando Costanza Propiedades</strong></p>
+                </div>
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <h5 class="text-uppercase">Ubicación</h5>
+                    <ul class="list-unstyled">
+                        <li class="text-white-50">Boulevard Brown 1500</li>
+                        <li class="text-white-50">Puerto Madryn, Chubut, Argentina</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-lg-4 mb-4 text-md-end">
+                    <h5 class="text-uppercase">Seguinos</h5>
+                    <!-- Links a las páginas oficiales de las redes -->
+                    <a href="https://www.instagram.com/" target="_blank" class="text-white me-3 fs-4 text-decoration-none"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" class="text-white me-3 fs-4 text-decoration-none"><i class="bi bi-facebook"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=5492801234567" target="_blank" class="text-white fs-4 text-decoration-none"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="text-center pt-3 mt-3 border-top border-secondary">
+                <p class="text-white-50 small">© 2024 Edificio COSTA MAR. Todos los derechos reservados. Diseño web conceptual.</p>
+            </div>
         </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="email" required>
-          <div class="invalid-feedback">Ingresá un email válido para poder enviarte información.</div>
-        </div>
-        <div class="mb-3">
-          <label for="mensaje" class="form-label">Consulta</label>
-          <textarea class="form-control" id="mensaje" rows="3" required></textarea>
-          <div class="invalid-feedback">Contanos en qué unidad estás interesado o qué información necesitás.</div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn btn-dark">Enviar</button>
-      </div>
-    </form>
-  </div>
-</div>
+    </footer>
 
-<!-- ✅ FOOTER -->
-<footer class="bg-dark text-white text-center p-4 mt-5">
-  <p class="mb-2">© 2025 Costa Mar · Comercializa 
-    <a href="https://www.armandocostanza.com/" class="text-white text-decoration-underline" target="_blank">
-      Armando Costanza Propiedades
-    </a>
-  </p>
-  <div class="pt-2">
-    <a href="https://www.instagram.com/inmobiliaria_armando_costanza/?hl=es" target="_blank" class="text-white me-3 fs-4" style="text-decoration: none;">
-      <i class="bi bi-instagram"></i>
-    </a>
-    <a href="https://www.facebook.com/Armandocostanzapropiedades/?locale=es_LA" target="_blank" class="text-white fs-4" style="text-decoration: none;">
-      <i class="bi bi-facebook"></i>
-    </a>
-  </div>
-</footer>
+    <!-- Bootstrap JS (al final del body) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<!-- ✅ SCRIPTS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  (() => {
-    'use strict';
-    const forms = document.querySelectorAll('.needs-validation');
-    forms.forEach(form => {
-      form.addEventListener('submit', e => {
-        if (!form.checkValidity()) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  })();
-</script>
+    <!-- Script para validación del formulario -->
+    <script>
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 </body>
 </html>
